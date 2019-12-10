@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+	<title>卖家登录</title>
+	<script src="clienthint.js"></script>
+	<link rel="stylesheet" type="text/css" href="inputboxes.css" />
+</head>
+	<body class="background">
+		<div class="main_header" >
+			<ul>
+				<li style="display:inline-block">
+					<a href="mainpage.php">教材广场</a>
+				</li>
+				<li style="display:inline-block">
+					<a href="myTout.php">买家中心</a>
+				</li>
+			</ul>
+		</div>
+		<div class="register-box-wrap">
+			<form class="register-box" id="form1" name="form1" action="login.php" method="post" onsubmit="return check_form('seller')">
+			<input class="register-input" type=text id="username" name="username" placeholder="商家名" /><br />
+			<input class="register-input" type="password" id="pwd" name="pwd" placeholder="商家密码" /><br />
+			<input  type="hidden" id="usertype" name="usertype" value="1" /><br/>
+			<span id="mobilespan" style="color:red"><br/></span>
+			<input class="register-button" type="submit" id="submit_botton" value="登录"/>
+			<input class="register-button" type="button" id="rigister_botton" value="注册" style="margin-left:35px" onclick="javascrtpt:window.location.href='sellerregister.html'"/>
+			</form>
+		</div>
+	</body>
+</html>
+

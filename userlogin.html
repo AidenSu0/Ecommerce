@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>MyTout 登录</title>
+	<script src="clienthint.js?ab=12"></script> 
+	<link rel="stylesheet" type="text/css" href="inputboxes.css" />
+
+</head>
+	<body class="background">
+		<div class="main_header" >
+			<ul>
+				<li style="display:inline-block">
+					<a href="mainpage.php">教材广场</a>
+				</li>
+				<li style="display:inline-block">
+					<a href="sellercenter.php">卖家中心</a>
+				</li>
+			</ul>
+		</div>
+		<div class="register-box-wrap">
+			<div class="register-box">
+				<form  id="form1" name="form1" action="login.php" method="post" onsubmit="return check_form('user')">
+					<input class="register-input" type=text id="username" name="username" placeholder="用户名" ><br />
+					<input class="register-input" type="password" id="pwd" name="pwd" placeholder="用户密码" ><br />
+					<input  type="hidden" id="usertype" name="usertype" value="0" />
+					<span id="mobilespan" style="color:red"><br/></span>
+					<input class="register-button" type="submit" id="submit_botton" value="登录">
+					<input class="register-button" type="button" id="rigister_botton" value="注册" style="margin-left:35px" onclick="javascrtpt:window.location.href='userregister.html'">
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

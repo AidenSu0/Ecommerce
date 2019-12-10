@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>用户注册</title>
+	<meta charset="gb2312"></meta>
+	<script src="clienthint.js?ab=12"></script> 
+	<link rel="stylesheet" type="text/css" href="inputboxes.css" />
+
+</head>
+	<body class="background" >
+		<div class="main_header" >
+			<ul>
+				<li style="display:inline-block">
+					<a href="mainpage.php">教材广场</a>
+				</li>
+				<li style="display:inline-block">
+					<a href="sellercenter.php">卖家中心</a>
+				</li>
+			</ul>
+		</div>
+		<div class="register-box-wrap">
+			<form class="register-box" id="form1" name="form1" action="useradd.php" method="post" onsubmit="return check_form_rg()">
+			<input class="register-input" type=text id="username" name="username" placeholder="用户名" onkeyup="check_name(this.value,'user')"><br />
+			<input class="register-input" type="password" id="pwd" name="pwd" placeholder="用户密码" /><br />
+			<input class="register-input" type="password" id="pwd2" name="pwd2" placeholder="确认密码" onblur="check_password()"><br />
+			<input class="register-input" type="text" id="mobile" name="mobile" placeholder="电话号码" title="请输入11位有效的手机号" pattern="1[0-9]{10}" required onkeyup="check_number(this.value,'user')"><br/>
+			<input  type="hidden" id="usertype" name="usertype" value="0" />
+			<span id="mobilespan" style="color:red"><br/></span>
+			<input class="register-button" type="submit" id="submit_botton" value="注册" disabled=false />
+			</form>
+		</div>
+	</body>
+</html>

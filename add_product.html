@@ -1,0 +1,37 @@
+
+<html>
+	<head>
+		<title>增加商品</title>
+		<script src="add_product.js"></script>
+		<link rel="stylesheet" type="text/css" href="inputboxes.css" />
+	</head>
+	<body style="background-color:darkred">
+		<div class="main_header" >
+			<ul>
+				<li style="display:inline-block">
+					<a href="mainpage.php">教材广场</a>
+				</li>
+				<li style="display:inline-block">
+					<a href="sellercenter.php">卖家中心</a>
+				</li>
+				<li style="display:inline-block;float:right;padding-right:60px" >
+					<a href="logout.php">退出登录</a>
+				</li>
+			</ul>
+		</div>
+	<div class="register-box" style="top:100px;right:50%" >
+		<form id="form_addProduct" name="form_addProduct" method="post" enctype="multipart/form-data" action="addProduct.php" onsubmit="return check_product()">
+			<p style="text-align:left;font-weight:bold;color:black">商品名称：</p>
+			<input class="register-input" type="text" id="productname" name="productname"  placeholder="商品名称"/>
+			<p style="text-align:left;font-weight:bold;color:black">商品价格：</p>
+			<input class="register-input" type="text" id="productprice" name="productprice"  placeholder="商品价格" />
+			<p style="text-align:left;font-weight:bold;color:black">商品库存：</p>
+			<input class="register-input" type="text" id="productstocknumber" name="productstocknumber"  placeholder="商品库存" />
+			<img height=200px width=200px id="preview" src="" />
+			<p style="text-align:left;font-weight:bold;color:black">上传图片</p>
+			<input type="file" id="uploadfile" name="uploadfile" accept="image/*" onchange="imgvisual()"/><br/><br/>
+			<input class="register-button" type="submit" id="submit" name="submit" value="新增"/>
+		</form>
+	</div>
+</body>
+</html>
